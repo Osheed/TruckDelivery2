@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_delivery"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="com.example.marc.truckdelivery.Delivery">
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/client"
+        android:id="@+id/spinnerChauffeur"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/chauffeur"
+        android:layout_marginTop="17dp"
+        android:id="@+id/spinnerClient"
+        android:layout_below="@+id/spinnerChauffeur"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextdeMar"
+        tools:ignore="LabelFor"
+        android:layout_above="@+id/buttonSave"
+        android:layout_alignStart="@+id/editTextdeCondi"
+        android:layout_marginBottom="27dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttondDelDelete"
+        tools:text="@string/delete"
+        android:layout_marginBottom="12dp"
+        android:onClick="delete_Delivery"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/editTextdeMar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSave"
+        android:onClick="UpdateDelivery"
+        tools:text="@string/sauvegarder"
+        android:layout_alignBaseline="@+id/buttondDelDelete"
+        android:layout_alignBottom="@+id/buttondDelDelete"
+        android:layout_alignEnd="@+id/editTextdeMar" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextdeCondi"
+        tools:ignore="LabelFor"
+        android:layout_above="@+id/editTextdeMar"
+        android:layout_alignStart="@+id/editTextdeQte"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editTextdeDate"
+        tools:ignore="LabelFor"
+        android:inputType="date"
+        android:layout_above="@+id/editTextdeQte"
+        android:layout_alignStart="@+id/button"
+        android:layout_marginBottom="35dp"
+        android:layout_alignEnd="@+id/button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button"
+        android:hint="@string/choisir_une_date"
+        android:onClick="showDatePickerDialog"
+        tools:text="@string/choisir_une_date"
+        android:layout_above="@+id/editTextdeDate"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="23dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextdeQte"
+        tools:ignore="LabelFor"
+        android:layout_above="@+id/editTextdeCondi"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

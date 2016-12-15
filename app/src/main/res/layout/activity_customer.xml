@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_customer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.marc.truckdelivery.Customer">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editTextcAdress"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/editTextcPhone"
+        tools:ignore="LabelFor"
+        android:hint="@string/adresse" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextcNPA"
+        android:layout_below="@+id/editTextcAdress"
+        android:layout_alignStart="@+id/editTextcAdress"
+        android:layout_marginTop="11dp"
+        tools:ignore="LabelFor"
+        android:hint="@string/npa" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextcLocalite"
+        android:layout_below="@+id/editTextcNPA"
+        android:layout_alignStart="@+id/editTextcNPA"
+        android:layout_marginTop="11dp"
+        tools:ignore="LabelFor"
+        android:hint="@string/localit" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextcPrenom"
+        tools:ignore="LabelFor"
+        android:layout_below="@+id/editTextcName"
+        android:layout_alignStart="@+id/editTextcName"
+        android:layout_marginTop="11dp"
+        android:hint="@string/pr_nom" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editTextcPhone"
+        android:layout_marginTop="13dp"
+        tools:ignore="LabelFor"
+        android:layout_below="@+id/editTextcPrenom"
+        android:layout_alignStart="@+id/editTextcPrenom"
+        android:hint="@string/t_l_phone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextcSociete"
+        tools:ignore="LabelFor"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/soci_t" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="11dp"
+        android:id="@+id/editTextcName"
+        tools:ignore="LabelFor"
+        android:layout_below="@+id/editTextcSociete"
+        android:layout_alignStart="@+id/editTextcSociete"
+        android:hint="@string/nom"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttoncSave"
+        android:layout_above="@+id/buttoncDelete"
+        android:layout_alignStart="@+id/buttoncDelete"
+        android:layout_below="@+id/editTextcLocalite"
+        tools:text="@string/sauvegarder"
+        android:onClick="updateCustomer"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:id="@+id/buttoncDelete"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        tools:text="@string/delete"
+        android:onClick="deleteCustomer"/>
+</RelativeLayout>

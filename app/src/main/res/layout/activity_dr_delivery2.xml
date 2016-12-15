@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="none"
+        android:ems="10"
+        android:layout_marginTop="30dp"
+        android:id="@+id/dr_delivery2"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="64dp"
+        android:textSize="24sp"
+        tools:ignore="LabelFor"
+        android:hint="@string/livr"
+        android:textIsSelectable="false"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dr_delivery2"
+        android:layout_alignStart="@+id/dr_delivery2"
+        android:layout_marginTop="33dp"
+        android:id="@+id/dr_delivery_course2"
+        android:layout_alignEnd="@+id/dr_delivery2"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dr_delivery_course2"
+        android:layout_alignStart="@+id/dr_delivery_course2"
+        android:layout_marginTop="43dp"
+        android:id="@+id/dr_delivery_date2"
+        android:layout_alignEnd="@+id/dr_delivery_course2"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dr_delivery_date2"
+        android:layout_alignStart="@+id/dr_delivery_date2"
+        android:layout_marginTop="45dp"
+        android:id="@+id/dr_delivery_quantity2"
+        android:textSize="24sp"
+        android:layout_alignEnd="@+id/dr_delivery_date2" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dr_delivery_quantity2"
+        android:layout_alignStart="@+id/dr_delivery_quantity2"
+        android:layout_marginTop="41dp"
+        android:id="@+id/dr_delivery_conditioning2"
+        android:layout_alignEnd="@+id/dr_delivery_quantity2"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dr_delivery_conditioning2"
+        android:layout_alignStart="@+id/dr_delivery_conditioning2"
+        android:layout_marginTop="48dp"
+        android:id="@+id/dr_delivery_commodity2"
+        android:textSize="24sp"
+        android:layout_alignEnd="@+id/dr_delivery_conditioning2" />
+
+</RelativeLayout>

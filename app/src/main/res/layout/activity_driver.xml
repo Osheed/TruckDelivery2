@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_driver"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.marc.truckdelivery.Driver">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextdrNom"
+        android:layout_marginTop="17dp"
+        android:layout_below="@+id/editTextdrCam"
+        android:layout_alignStart="@+id/editTextdrCam"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextdrPrenom"
+        android:layout_marginTop="12dp"
+        android:layout_below="@+id/editTextdrNom"
+        android:layout_alignStart="@+id/editTextdrNom"
+        tools:ignore="LabelFor" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_marginTop="18dp"
+        android:id="@+id/editTextdrPlaque"
+        android:layout_below="@+id/editTextdrPhone"
+        tools:ignore="LabelFor"
+        android:layout_toEndOf="@+id/textViewPhone" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="phone"
+        android:ems="10"
+        android:id="@+id/editTextdrPhone"
+        android:layout_below="@+id/editTextdrPrenom"
+        android:layout_alignStart="@+id/editTextdrPrenom"
+        android:layout_marginTop="17dp"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editTextdrCam"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewCam"
+        android:layout_above="@+id/editTextdrNom"
+        android:layout_toStartOf="@+id/editTextdrCam"
+        tools:text="@string/n_camion" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editTextdrNom"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewNom"
+        android:layout_above="@+id/editTextdrPrenom"
+        android:layout_toStartOf="@+id/editTextdrNom"
+        tools:text="@string/nom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editTextdrPrenom"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewPrenom"
+        android:layout_above="@+id/editTextdrPhone"
+        android:layout_toStartOf="@+id/editTextdrPrenom"
+        tools:text="@string/pr_nom" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/editTextdrPhone"
+        android:layout_alignParentStart="true"
+        android:id="@+id/textViewPhone"
+        android:layout_above="@+id/editTextdrPlaque"
+        android:layout_toStartOf="@+id/editTextdrPhone"
+        tools:text="@string/t_l_phone" />
+
+    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignTop="@+id/editTextdrPlaque"
+    android:layout_alignParentStart="true"
+    android:id="@+id/textViewPlaque"
+    android:layout_toStartOf="@+id/editTextdrPlaque"
+    tools:text="@string/n_camion"
+    android:layout_alignBottom="@+id/editTextdrPlaque" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/drbuttonSave"
+        android:onClick="updateDriver"
+        android:layout_marginEnd="82dp"
+        android:layout_alignBaseline="@+id/deleteDriver"
+        android:layout_alignBottom="@+id/deleteDriver"
+        android:layout_alignParentEnd="true"
+        tools:text="@string/sauvegarder" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/deleteDriver"
+        android:layout_marginBottom="15dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/drbuttonSave"
+        android:layout_marginEnd="30dp"
+        android:onClick="delete_Driver"
+        tools:text="@string/delete" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewPass"
+        tools:text="@string/password"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/editTextdrPlaque"
+        android:layout_alignParentStart="true"
+        android:layout_toStartOf="@+id/editTextdrPass" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/editTextdrPass"
+        tools:ignore="LabelFor"
+        android:layout_alignTop="@+id/textViewPass"
+        android:layout_alignParentEnd="true"
+        android:hint="@string/enter_a_newPass" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/n_camion"
+        android:ems="10"
+        android:id="@+id/editTextdrCam"
+        android:layout_marginTop="16dp"
+        tools:ignore="LabelFor"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
